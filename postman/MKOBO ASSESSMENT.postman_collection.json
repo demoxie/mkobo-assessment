@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "aefab090-996d-41b6-a67b-83c975aa07ad",
+		"name": "MKOBO ASSESSMENT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16898406",
+		"_collection_link": "https://gms-devs.postman.co/workspace/SURE-TRADE-V2~869ec0b8-cdd4-4642-8813-50d06d994f09/collection/16898406-aefab090-996d-41b6-a67b-83c975aa07ad?action=share&source=collection_link&creator=16898406"
+	},
+	"item": [
+		{
+			"name": "ADD STAFF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Shadrach Adamu\",\n    \"registrationDate\":\"2023-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8200/api/v1/staffs"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE STAFF",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Shadrach\",\n    \"registrationDate\":\"2023-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8200/api/v1/staffs/f8c269d3-5115-4a89-ab7e-66be85df9ac6"
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH ALL PATIENTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/api/v1/hospital/all?staffUuid=7bbd682f-6fc2-4555-bc4f-07f44768a73a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"hospital",
+						"all"
+					],
+					"query": [
+						{
+							"key": "staffUuid",
+							"value": "7bbd682f-6fc2-4555-bc4f-07f44768a73a"
+						},
+						{
+							"key": "minimumAge",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "pageNumber",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "age",
+							"disabled": true
+						},
+						{
+							"key": "sortDirection",
+							"value": "ASC",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DOWNLOAD PATIENT PROFILE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/api/v1/hospital/download?staffUuid=7bbd682f-6fc2-4555-bc4f-07f44768a73a&patientName=Shell",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"hospital",
+						"download"
+					],
+					"query": [
+						{
+							"key": "staffUuid",
+							"value": "7bbd682f-6fc2-4555-bc4f-07f44768a73a"
+						},
+						{
+							"key": "patientName",
+							"value": "Shell"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE MULTIPLE PATIENTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8200/api/v1/hospital/all?staffUuid=7bbd682f-6fc2-4555-bc4f-07f44768a73a&ageRange=2-4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"api",
+						"v1",
+						"hospital",
+						"all"
+					],
+					"query": [
+						{
+							"key": "staffUuid",
+							"value": "7bbd682f-6fc2-4555-bc4f-07f44768a73a"
+						},
+						{
+							"key": "ageRange",
+							"value": "2-4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

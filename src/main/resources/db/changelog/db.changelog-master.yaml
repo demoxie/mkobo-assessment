@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - includeAll:
+        path: classpath*:db/changelog/create
+  - includeAll:
+        path: classpath*:db/changelog/insert
+#  - includeAll:
+#        path: classpath*:db/changelog/update
+#  - includeAll:
+#        path: classpath*:db/changelog/delete
+#  - includeAll:
+#        path: classpath*:db/changelog/alter
+#  - includeAll:
+#        path: classpath*:db/changelog/rollback
+#  - includeAll:
+#        path: classpath*:db/changelog/drop
